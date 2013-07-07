@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.devMode" value="false" />
+	<constant name="struts.custom.i18n.resources" value="global" />
+	<constant name="struts.i18n.reload" value="false" /> 
+	<constant name="struts.configuration.xml.reload" value="false" />
+	<constant name="struts.multipart.maxSize" value="50777216000" />
+	<!--  constant name="struts.multipart.saveDir" value="C:\\\workspaces\Allamco\AllamcoWeb\WebContent\images" /-->
+	<!--  constant name="struts.multipart.saveDir" value="/home/allamco1/public_html/images" /-->
+
+
+<package name="default" namespace="/" extends="json-default">
+	<global-results>
+		<result name="logout">/index.jsp</result>
+	</global-results>
+	<action name="*">
+		<interceptor-ref name="defaultStack"/>			
+		<interceptor-ref name="scope">
+			<param name="session">userInfo</param>
+		    <param name="autoCreateSession">true</param>
+		</interceptor-ref>	
+		<result name="success">/index.jsp</result>
+	</action>	
+
+</package>
+</struts>
