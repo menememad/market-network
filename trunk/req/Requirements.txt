@@ -1,0 +1,13 @@
+The system will be as the following (please correct me if I'm wrong in any point):
+
+1- There will be two types of system users, administrators (MarketNetwork agents) and sellers (Etisalat employees in shops and branches)
+2- Etisalat will send to MarketNetwork a text file (preferrable to be CSV file format) including the promotional code, full client name and mobile number
+3- MarketNetwork agent will login to our system and upload the file to be inserted into the database.
+4- At this moment, all the uploaded codes will have status 'NEW'
+5- The admin will select one or more or all codes to be sent via SMS, this is by calling a certain service from Etisalat by providing it with the data required for the message
+6- At this moment, all the sent codes will have status 'SENT'
+7- The end-user (client) will receive the message at his mobile with the promotional code and will go to the nearest Etisalat shop to redeem it
+8- Etisalat employee will login to our system and search for the promotional code using the code itself with the mobile number
+9- At this moment, the redeemed code will have status 'REDEEMED'
+
+Apart from that, MarketNetwork admin will have the ability to display a report describing the promotional codes status
